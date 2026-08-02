@@ -1,92 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0b">
+  <title>Rüya Kurt — Computer Engineer & Software Developer</title>
+  <meta name="description" content="Portfolio of Rüya Kurt, a Computer Engineering graduate from Yeditepe University specializing in software development, Unity game development, and mobile applications.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rüya Kurt — Computer Engineer ">
+  <meta property="og:description" content="Portfolio of Rüya Kurt, a Computer Engineering graduate from Yeditepe University specializing in software development, Unity game development, and mobile applications.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ruyakurt.com/">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rüya Kurt — Computer Engineer">
+  <meta name="twitter:description" content="Portfolio of Rüya Kurt, a Computer Engineering graduate from Yeditepe University specializing in software development, Unity game development, and mobile applications.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="public/css/style.css">
 </head>
-
 <body>
+  <!-- Overlays -->
+  <div id="cursor-glow"></div>
+  <div id="noise-overlay"></div>
 
-    <div class="topbar">
-        <div class="wrapper target">
-
-            <div class="left">
-                <a href="https://x.com/Ruyakrtt" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.instagram.com/ruya_krt/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/r%C3%BCya-kurt-496160268/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/ryaxx" target="_blank"><i class="fa-brands fa-square-github"></i></a>
-            </div>
-        </div>
-
-        <div class="center">
-
-        </div>
-        <div class="right">
-            <span>
-                    <img src="public/img/WhatsApp Image 2025-03-18 at 02.51.52_ff1dbdb2.jpg"> 
-                </span>
-
-        </div>
-
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">RK</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#techstack" class="nav-link">Tech Stack</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <a href="#contact" class="nav-cta magnetic-btn">Let's Talk</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
+  
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#techstack" class="mobile-link">Tech Stack</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
 
-
+  <!-- Hero -->
+  <section id="hero">
+    <div class="aurora-bg"></div>
+    <div class="hero-content">
+      <div class="hero-avatar" style="width: 100px; height: 100px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 2px solid rgba(255,255,255,0.1); box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);">
+        <img src="public/img/WhatsApp%20Image%202025-03-18%20at%2000.24.06_05c8255e.jpg" alt="Rüya Kurt" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <p class="hero-greeting">Hello, I'm 👋</p>
+      <h1 class="hero-title">Rüya Kurt</h1>
+      <div class="hero-subtitle">
+        <span id="typed-text">Computer Engineer</span>
+      </div>
+      <p class="hero-description">I am a Computer Engineer from Yeditepe University. I build modern software solutions, design intuitive user experiences, and continuously learn new technologies.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary magnetic-btn">
+          View Projects
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="public/cv/Rüya%20Kurt%20CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
+          Download CV
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic-btn">
+          Contact Me
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 4 6-4M2 4h12v8H2V4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
     </div>
+    
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+    
+    <div class="floating-shapes">
+      <span class="shape"></span>
+      <span class="shape"></span>
+      <span class="shape"></span>
+      <span class="shape"></span>
+      <span class="shape"></span>
+      <span class="shape"></span>
+    </div>
+  </section>
 
-    <header class="header target">
-        <img src="public/img/WhatsApp Image 2025-03-18 at 00.24.07_52bba74b.jpg" alt="background">
-        <h1>RÜYA KURT</h1>
-        <h3> </h3>
-    </header>
-
-    <div class="home">
-        <div class="wrapper">
-            <div class="posts">
-                <div class="post">
-                    <h1>Title</h1>
-                    <img src="public/img/WhatsApp Image 2025-03-18 at 00.24.06_384971b0.jpg" alt="content">
-                    <p>Hello! I am a computer engineering student. In addition to my passion for technology
-
-                    </p>
-                </div>
-                <div class="post">
-                    <h1>Social Activites</h1>
-                    <img src="public/img/WhatsApp Image 2025-03-18 at 00.24.07_1df3813c.jpg" alt="content">
-                    <p>I love exploring new places and traveling. Spending time with my friends is an essential joy for me.
-                    </p>
-                </div>
-                <div class="post">
-                    <h1>Random Photos</h1>
-                    <img src="public/img/WhatsApp Image 2025-03-18 at 23.27.59_fe166e9e.jpg" alt="content">
-                    <p>I love living life to the fullest and cherishing every moment!
-
-                    </p>
-                </div>
-
-
-            </div>
-            <div class="sidebar">
-                <div class="area">
-                    <h3>Who Am I?</h3>
-                    <img src="public/img/WhatsApp Image 2025-03-18 at 00.24.06_05c8255e.jpg" all="user">
-                    <div class="categories">
-                        <span>-Yeditepe University</span>
-                        <span>-Computer Engineering Student</span>
-
-                    </div>
-                </div>
-
-            </div>
+  <main>
+    <!-- About -->
+    <section id="about">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <p class="section-label">ABOUT ME</p>
+          <h2 class="section-title">Passionate about building the future</h2>
         </div>
-    </div>
-    <script src="public/js/search.js"></script>
-    <script src="public/js/scroll.js"></script>
+        <div class="about-text" style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.125rem;">
+          <p style="margin-bottom: 1.5rem;">I am a Computer Engineering graduate who enjoys developing modern, user-centered software solutions. Throughout my academic journey and internship experience, I have gained hands-on experience with a variety of technologies.</p>
+          <p>I enjoy learning new technologies, solving complex problems, and transforming ideas into digital products that prioritize user experience. I am committed to continuous learning and aspire to contribute to innovative projects that create meaningful value through technology.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Experience -->
+    <section id="experience">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <p class="section-label">EXPERIENCE</p>
+          <h2 class="section-title">Where I've contributed</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Software Development Intern</h3>
+              <span class="timeline-role">Applied Database Technology — Production & Planning Dept.</span>
+              <p class="timeline-description">Contributed to aviation MRO software development projects using SQL and Eclipse BIRT.</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Software Development</span>
+                <span class="timeline-tag">SQL</span>
+                <span class="timeline-tag">Eclipse BIRT</span>
+                <span class="timeline-tag">Aviation MRO</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">Yeditepe University System Engineers Society</h3>
+              <span class="timeline-role">Active Member</span>
+              <p class="timeline-description">Contributed to technical workshops and community events promoting engineering culture.</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Leadership</span>
+                <span class="timeline-tag">Community</span>
+                <span class="timeline-tag">Technical Events</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-title">IEEE Computer Society</h3>
+              <span class="timeline-role">Member</span>
+              <p class="timeline-description">Participated in technical seminars, networking events, and collaborative projects with fellow engineers.</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">IEEE</span>
+                <span class="timeline-tag">Networking</span>
+                <span class="timeline-tag">Professional Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <p class="section-label">FEATURED WORK</p>
+          <h2 class="section-title">Projects I've built</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card featured tilt-card">
+            <div class="project-image">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #a78bfa, #818cf8); display: flex; align-items: center; justify-content: center; font-size: 4rem;">🎮</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label">Featured Project</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 class="project-title">Multiplayer VR Mobile Game</h3>
+              <p class="project-description">A real-time multiplayer virtual reality game built for mobile platforms. Features immersive VR interaction, cross-platform multiplayer capabilities, and optimized network synchronization for seamless gameplay.</p>
+              <div class="project-tags">
+                <span>Unity</span>
+                <span>C#</span>
+                <span>Photon PUN2</span>
+                <span>VR</span>
+                <span>Multiplayer</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ryaxx" class="project-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card tilt-card">
+            <div class="project-image">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #f472b6, #fb7185); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🃏</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label">Project</span>
+                <span class="project-year">2023</span>
+              </div>
+              <h3 class="project-title">Memory Card Game</h3>
+              <p class="project-description">A classic memory card matching game built with Java. Features smooth card flip animations, score tracking, and increasing difficulty levels.</p>
+              <div class="project-tags">
+                <span>Java</span>
+                <span>OOP</span>
+                <span>Game Logic</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ryaxx" class="project-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card tilt-card">
+            <div class="project-image">
+              <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #38bdf8, #818cf8); display: flex; align-items: center; justify-content: center; font-size: 3rem;">🧩</div>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <span class="project-label">Project</span>
+                <span class="project-year">2023</span>
+              </div>
+              <h3 class="project-title">Tetris Game</h3>
+              <p class="project-description">A fully functional Tetris clone built from scratch in C++. Implements classic Tetris mechanics including piece rotation, line clearing, and progressive difficulty.</p>
+              <div class="project-tags">
+                <span>C++</span>
+                <span>Game Dev</span>
+                <span>Algorithms</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ryaxx" class="project-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-brands fa-github"></i> Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="techstack">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <p class="section-label">TECH STACK</p>
+          <h2 class="section-title">Technologies I work with</h2>
+        </div>
+        <div class="tech-grid">
+          <div class="tech-card">
+            <div class="tech-icon"><span style="font-weight: 700;">C</span></div>
+            <span class="tech-name">C</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><span style="font-weight: 700;">C++</span></div>
+            <span class="tech-name">C++</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><span style="font-weight: 700;">C#</span></div>
+            <span class="tech-name">C#</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-java"></i></div>
+            <span class="tech-name">Java</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-python"></i></div>
+            <span class="tech-name">Python</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><span style="font-weight: 700;">SQL</span></div>
+            <span class="tech-name">SQL</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-unity"></i></div>
+            <span class="tech-name">Unity</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-git-alt"></i></div>
+            <span class="tech-name">Git</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-github"></i></div>
+            <span class="tech-name">GitHub</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><span style="font-weight: 700;">VS</span></div>
+            <span class="tech-name">VS Code</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-html5"></i></div>
+            <span class="tech-name">HTML</span>
+          </div>
+          <div class="tech-card">
+            <div class="tech-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <span class="tech-name">CSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <p class="section-label">SKILLS</p>
+          <h2 class="section-title">What I bring to the table</h2>
+        </div>
+        <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="skill-category-card">
+            <div class="skill-category-icon">💻</div>
+            <h3 class="skill-category-title">Programming Languages</h3>
+            <div class="skill-items">
+              <span class="skill-item">C</span>
+              <span class="skill-item">C++</span>
+              <span class="skill-item">C#</span>
+              <span class="skill-item">Java</span>
+              <span class="skill-item">Python</span>
+              <span class="skill-item">SQL</span>
+              <span class="skill-item">PL/SQL</span>
+            </div>
+          </div>
+          <div class="skill-category-card">
+            <div class="skill-category-icon">🛠️</div>
+            <h3 class="skill-category-title">Development Tools</h3>
+            <div class="skill-items">
+              <span class="skill-item">Unity</span>
+              <span class="skill-item">Visual Studio</span>
+              <span class="skill-item">VS Code</span>
+              <span class="skill-item">PyCharm</span>
+              <span class="skill-item">Eclipse</span>
+              <span class="skill-item">Git</span>
+              <span class="skill-item">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-category-card">
+            <div class="skill-category-icon">🌍</div>
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="skill-items">
+              <span class="skill-item">Turkish (Native)</span>
+              <span class="skill-item">English (B2 — Upper Intermediate)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="section-container reveal">
+        <div class="section-header">
+          <p class="section-label">EDUCATION</p>
+          <h2 class="section-title">Academic background</h2>
+        </div>
+        <div class="education-card">
+          <div class="education-icon">🎓</div>
+          <div class="education-content">
+            <h3>Yeditepe University</h3>
+            <p class="education-degree">Bachelor of Science in Computer Engineering</p>
+            <p class="education-year">Graduated 2026</p>
+            <p class="education-description">Comprehensive education covering algorithms, data structures, software engineering, computer networks, database systems, and artificial intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-container reveal">
+        <div class="contact-content" style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <p class="section-label">GET IN TOUCH</p>
+          <h2 class="section-title">Let's build something amazing together</h2>
+          <p class="contact-description" style="margin: 1.5rem 0 2.5rem; color: #94a3b8;">I'm currently looking for new opportunities. Whether you have a project in mind, a question, or just want to say hi — my inbox is always open.</p>
+          <div class="contact-buttons" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem;">
+            <a href="mailto:ruyakurt.02@gmail.com" class="btn btn-primary magnetic-btn" target="_blank" rel="noopener noreferrer">
+              Say Hello
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rüya-kurt-496160268/" class="btn btn-secondary magnetic-btn" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+          <div class="contact-socials" style="display: flex; gap: 1.5rem; justify-content: center; font-size: 1.5rem;">
+            <a href="https://github.com/ryaxx" class="social-link" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; transition: color 0.3s;"><i class="fa-brands fa-github"></i></a>
+            <a href="https://x.com/Ruyakrtt" class="social-link" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; transition: color 0.3s;"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/ruya_krt/" class="social-link" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; transition: color 0.3s;"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/rüya-kurt-496160268/" class="social-link" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; transition: color 0.3s;"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#" class="footer-logo">RK</a>
+        <p class="footer-tagline">Crafting digital experiences with passion and precision.</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Rüya Kurt. All rights reserved.</p>
+        <p class="footer-credit">Designed & Built with 💜</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="public/js/main.js"></script>
 </body>
-
 </html>
